@@ -2,9 +2,9 @@
 A Python-based Engine for extracting datapoints from PDF files
 
 > [!NOTE]
-> This engine will be made purely using python and python libraries, without any external 3rd party solutions
-> PDF files will be provided to the engine via API requests, and no PDF files will leave the infrastructure
-> Full API integration
+> 1. This engine will be made purely using python and python libraries, without any external 3rd party solutions
+> 2. PDF files will be provided to the engine via API requests, and no PDF files will leave the infrastructure
+> 3. Full API integration
 
 # Process Overview
 1. First of all, a PDF file will be sent to the engine's API endpoint, which will be created using `Flask`
@@ -51,12 +51,14 @@ A Python-based Engine for extracting datapoints from PDF files
 ```
 
 # Challenges and how they will be solved in the engine:
-1. Type 2A documents are a challenge because of poor quality, rotation or varying zoom levels.
-  `opencv` will be used to solve these problems: noise reduction and image enhancement will be used for poor quality, deskewing for rotation, and rescaling for zoom levels.
-2. Detection of two types of checkboxes critical for DP identification and validation.
-  `pytesseract` will help to extract dps easily using OCR.
-3. High Accuracy
-   `pytesseract` is highly accurate when it comes to extraction.
+Challenge: Type 2A documents are a challenge because of poor quality, rotation or varying zoom levels.
+Solution: `opencv` will be used to solve these problems: noise reduction and image enhancement will be used for poor quality, deskewing for rotation, and rescaling for zoom levels.
+
+Challenge: Detection of two types of checkboxes critical for DP identification and validation.
+Solution: `pytesseract` will help to extract dps easily using OCR.
+
+Challenge: High Accuracy
+Solution: `pytesseract` is highly accurate when it comes to extraction.
 
 # Future Integrations
 In the future, an LLM such as Llama 3 will be integrated, for querying dps easily and quickly in an interactive manner.
