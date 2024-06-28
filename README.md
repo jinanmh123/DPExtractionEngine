@@ -15,7 +15,7 @@ A Python-based Engine for extracting datapoints from PDF files
 
 ***The GUI extension will also be added to replace/adjust each DP extracted manually (the gui will be created using `jinja` in the `flask` application)***
 
-*** Process diagram:***
+***Process diagram:***
 ```
 [Start]
    |
