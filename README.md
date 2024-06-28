@@ -15,7 +15,7 @@ A Python-based Engine for extracting datapoints from PDF files
 
 ***The GUI extension will also be added to replace/adjust each DP extracted manually (the gui will be created using `jinja` in the `flask` application)***
 
-# Process diagram:
+*** Process diagram:***
 ```
 [Start]
    |
@@ -51,14 +51,14 @@ A Python-based Engine for extracting datapoints from PDF files
 ```
 
 # Challenges and how they will be solved in the engine:
-Challenge: Type 2A documents are a challenge because of poor quality, rotation or varying zoom levels.
-Solution: `opencv` will be used to solve these problems: noise reduction and image enhancement will be used for poor quality, deskewing for rotation, and rescaling for zoom levels.
+***Challenge:*** Type 2A documents are a challenge because of poor quality, rotation or varying zoom levels.
+***Solution:*** `opencv` will be used to solve these problems: noise reduction and image enhancement will be used for poor quality, deskewing for rotation, and rescaling for zoom levels.
 
-Challenge: Detection of two types of checkboxes critical for DP identification and validation.
-Solution: `pytesseract` will help to extract dps easily using OCR.
+***Challenge:*** Detection of two types of checkboxes critical for DP identification and validation.
+***Solution:*** `pytesseract` will help to extract dps easily using OCR.
 
-Challenge: High Accuracy
-Solution: `pytesseract` is highly accurate when it comes to extraction.
+***Challenge:*** High Accuracy
+***Solution:*** `pytesseract` is highly accurate when it comes to extraction.
 
 # Future Integrations
 In the future, an LLM such as Llama 3 will be integrated, for querying dps easily and quickly in an interactive manner.
